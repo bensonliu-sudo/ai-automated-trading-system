@@ -1,0 +1,31 @@
+# Global config template
+# universe:
+#   name: # System name
+#   version: # Version number
+#   timezone: # Timezone setting
+#   language: # Default language
+#   features:
+#     translation: # Translation feature toggle
+#     hot_reload: # Hot reload toggle
+#     debug_mode: # Debug mode
+# watchlist: ["NVDA","AMD","AVGO","SMCI","INTC","MRVL","TSLA","PLTR","OPEN","OCTO"]
+sectors: ["ai","semiconductors","robotics","crypto","quantum"]
+watchlist:
+  - TSLA
+  - NVDA
+  - ORCL
+  - OPEN
+  - AVGO
+  - MRVL
+  - BABA
+  - MU
+
+cik_map:
+  TSLA: "1318605"
+  NVDA: "1045810"
+  ORCL: "1341439"
+  OPEN: "1801169"
+  AVGO: "1730168"
+  MRVL: "1058057"
+  BABA: "1577552"
+  MU: "723125"

@@ -1,0 +1,261 @@
+# Data source config template
+# sources:
+#   - name: # Data source name
+#     url: # Data source URL
+#     type: # Type (rss/json/api)
+#     parser: # Parser to use
+#     interval: # Collection interval (seconds)
+#     enabled: # Whether enabled
+#   - name: # Another data source
+#     url:
+#     type:
+#     parser:
+sources:
+
+  - id: sec_press
+    type: rss
+    url: "https://www.sec.gov/news/pressreleases.rss"
+    interval_sec: 60
+    parser: rss_default
+    enabled: true
+    max_age_hours: 48
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 3
+
+  - id: fed_press
+    type: rss
+    url: "https://www.federalreserve.gov/feeds/press_all.xml"
+    interval_sec: 60
+    parser: rss_default
+    enabled: true
+    max_age_hours: 48
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 3
+
+  
+
+  - id: ars_tech
+    type: rss
+    url: "https://feeds.arstechnica.com/arstechnica/technology"
+    interval_sec: 45
+    parser: rss_default
+    enabled: false        # Recommended off for now; can be enabled if desired
+    max_age_hours: 24
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 2
+
+
+# AI & semiconductor giants
+  - id: nvidia_news
+    type: rss
+    url: "https://nvidianews.nvidia.com/releases.xml"
+    interval_sec: 60
+    parser: rss_default
+    enabled: true
+    max_age_hours: 48
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 3
+
+
+
+
+  - id: broadcom_news
+    type: rss
+    url: "https://investors.broadcom.com/rss/news-releases.xml"
+    interval_sec: 60
+    parser: rss_default
+    enabled: true
+    max_age_hours: 48
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 3
+
+
+
+
+  # Quantum computing sector
+
+
+  - id: rigetti_news
+    type: rss
+    url: "https://investors.rigetti.com/rss/news-releases.xml"
+    interval_sec: 60
+    parser: rss_default
+    enabled: true
+    max_age_hours: 48
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 3
+
+
+
+
+  # Tech giants - AI & cloud computing
+  - id: microsoft_news
+    type: rss
+    url: "https://news.microsoft.com/feed/"
+    interval_sec: 60
+    parser: rss_default
+    enabled: true
+    max_age_hours: 48
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 3
+
+
+
+
+
+
+  # New energy & EVs
+
+
+
+
+  - id: lucid_motors_news
+    type: rss
+    url: "https://ir.lucidmotors.com/rss/news-releases.xml"
+    interval_sec: 60
+    parser: rss_default
+    enabled: true
+    max_age_hours: 48
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 3
+
+  - id: nio_news
+    type: rss
+    url: "https://ir.nio.com/rss/news-releases.xml"
+    interval_sec: 60
+    parser: rss_default
+    enabled: true
+    max_age_hours: 48
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 3
+
+
+
+
+
+
+
+
+  #
+
+  # General tech & media news sources
+  - id: techcrunch_news
+    type: rss
+    url: "https://techcrunch.com/feed/"
+    interval_sec: 120
+    parser: rss_default
+    enabled: true
+    max_age_hours: 24
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 5
+
+
+
+  # Verified existing config
+  - id: google_blog
+    type: rss
+    url: "https://blog.google/rss/"
+    interval_sec: 60
+    parser: rss_default
+    enabled: true
+    max_age_hours: 48
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 3
+
+
+
+
+  - id: meta_news
+    type: rss
+    url: "https://about.fb.com/news/feed/"
+    interval_sec: 120
+    parser: rss_default
+    enabled: true
+    max_age_hours: 48
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 5
+
+
+ 
+
+  - id: baidu_news
+    type: rss
+    url: "https://ir.baidu.com/rss/news-releases.xml"
+    interval_sec: 180
+    parser: rss_default
+    enabled: true
+    max_age_hours: 48
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 5
+
+
+
+
+  - id: bloomberg_tech
+    type: rss
+    url: "https://feeds.bloomberg.com/technology/news.rss"
+    interval_sec: 180
+    parser: rss_default
+    enabled: true
+    max_age_hours: 24
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 5
+
+
+
+  - id: cnbc_tech
+    type: rss
+    url: "https://www.cnbc.com/id/19854910/device/rss/rss.html"
+    interval_sec: 180
+    parser: rss_default
+    enabled: true
+    max_age_hours: 24
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 5
+
+  - id: kr36_news
+    type: rss
+    url: "https://36kr.com/feed"
+    interval_sec: 300
+    parser: rss_default
+    enabled: true
+    max_age_hours: 24
+    bootstrap_latest_only: true
+    bootstrap_keep_n: 5
+
+  # ====== Secondary market news sources ======
+
+
+  - id: ithome_news
+    type: rss
+    url: "https://www.ithome.com/rss/"   # IThome finance/tech; usable as a replacement for Tonghuashun finance news
+    interval_sec: 120
+    enabled: true
+
+
+
+  - id: tradingview_news
+    type: rss
+    url: "https://www.tradingview.com/feed/"   # TradingView public feed
+    interval_sec: 180
+    enabled: true
+
+  - id: yahoo_finance_news
+    type: rss
+    url: "https://feeds.finance.yahoo.com/rss/2.0/headline?s=AAPL,MSFT,TSLA&region=US&lang=en-US"  # Yahoo Finance
+    interval_sec: 180
+    enabled: true
+
+ 
+  
+  - id: reddit_stocks
+    type: rss
+    url: "https://www.reddit.com/r/stocks/.rss"   # Reddit r/stocks
+    interval_sec: 180
+    enabled: true
+
+  - id: reddit_crypto
+    type: rss
+    url: "https://www.reddit.com/r/cryptocurrency/.rss"   # Reddit r/cryptocurrency
+    interval_sec: 180
+    enabled: true

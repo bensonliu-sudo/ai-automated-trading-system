@@ -1,0 +1,26 @@
+# Topic classification config template
+# topics:
+#   - name: # Topic name
+#     keywords: # List of related keywords
+#       -
+#     weight: # Weight
+#   - name: # Another topic
+#     keywords:
+#       -
+#     weight:
+topics:
+  ai:
+    tags: ["AI","ai","LLM","inference","training","Transformer","GenAI","推理","训练","NPU","GPU","CUDA","加速卡","算力","算力中心","AI升级","ai upgrade"]
+    hashtag: "#AI"
+  semiconductors:
+    tags: ["半导体","semiconductor","HBM","CPO","光模块","optical module","EDA","代工","foundry","封装","packaging","基板","substrate","服务器","server","液冷","liquid cooling","数据中心","datacenter","晶圆","wafer","流片","tapeout","制程","node","GAA","EUV"]
+    hashtag: "#Semis"
+  robotics:
+    tags: ["机器人","robot","automation","自动化","AGV","AMR","伺服","servo","sensor","actuator","工业自动化"]
+    hashtag: "#Robotics"
+  crypto:
+    tags: ["加密货币","crypto","交易所","exchange","托管","custody","黑客","hack","RWA","tokenized treasury","链上国债","ETF","spot etf","SOL","XRP","ADA","staking","defi"]
+    hashtag: "#Crypto"
+  quantum:
+    tags: ["量子计算","quantum computing","量子位","qubit","量子芯片","quantum chip","超导","ion trap"]
+    hashtag: "#Quantum"

@@ -1,0 +1,41 @@
+# Runtime configuration. Secrets are read from environment variables
+# (see .env.example); leave the placeholder fields below empty.
+
+notifier:
+  notify_channels: ["telegram"]
+  channel: "telegram"
+  debug_startup_push: true
+  quiet_hours: "00:00-08:00"
+  batch_window_sec: 0
+  retry:
+    max_times: 3
+  schema_version: 1
+  display_timezone: "Australia/Sydney"
+  retention_hours: 48          # events older than this are purged
+  dedupe_minutes: 15           # suppress duplicate alerts within this window
+  critical_threshold: 85       # score >= critical -> instant alert
+  important_threshold: 30      # score >= important -> stored + batched
+  translate_to_zh: false
+  storage: "sqlite"
+  self_watch_interval_sec: 10
+  sector_watch_interval_sec: 45
+  token: ""                    # falls back to TELEGRAM_BOT_TOKEN env var
+  chat_id: ""                  # falls back to TELEGRAM_CHAT_ID env var
+
+trader:
+  enable: true
+  dry_run: true                # true = log intended orders only; false = send to IBKR
+  buy_threshold: 70            # minimum news score before the LLM is consulted
+  sell_threshold: 20
+  max_position_per_symbol: 100 # shares
+  initial_capital: 100000.0    # virtual budget tracked by SimplePortfolio
+  ibkr:
+    host: "127.0.0.1"
+    port: 4002                 # 4002 = IB Gateway paper, 4001 = IB Gateway live,
+                               # 7497 = TWS paper, 7496 = TWS live
+    client_id: 1
+
+llm:
+  api_key: ""                  # falls back to LLM_API_KEY env var
+  base_url: "https://api.deepseek.com/v1"   # any OpenAI-compatible endpoint
+  model: "deepseek-chat"

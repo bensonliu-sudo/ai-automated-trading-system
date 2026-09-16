@@ -1,0 +1,131 @@
+# Keyword config template
+# high_priority:
+#   - # High-priority keywords
+# medium_priority:
+#   - # Medium-priority keywords
+# low_priority:
+#   - # Low-priority keywords
+# exclude:
+#   - # Excluded keywords
+
+# Write English keywords as lowercase stems; matching is case-insensitive and automatically covers s/es/ed/ing forms
+# English keywords as lowercase stems; matching is case-insensitive and auto-expands s/es/ed/ing
+tiers:
+  tier1:   # Tier 1: strong bullish/strong regulatory signals, direct impact on share price
+    - invest
+    - contract
+    - order
+    - acquisition
+    - merger
+    - guidance
+    - buyback
+    - insider buy
+    - management change
+    - approval
+    - ban
+    - antidumping
+    - breakthrough
+    - milestone
+    - ai upgrade
+    - partnership
+    - customer win
+    - premarket jump
+    - raise outlook
+    - rwa
+    - tokenized treasury
+    - listing approval
+    - sec approval
+    - spot etf
+    - ipo date
+    - fda approval
+    - export control
+    - sanction
+    - 重大投资
+    - 重大合同
+    - 大额订单
+    - 并购
+    - 财报
+    - 指引上调
+    - 回购
+    - 增持
+    - 管理层变更
+    - 获批
+    - 禁令
+    - 反倾销
+    - 技术突破
+    - 里程碑
+    - AI升级
+    - 战略合作
+    - 大客户
+    - 现货ETF
+    - 上市批准
+    - RWA
+  tier2:   # Tier 2: clearly bullish / trending sentiment / supply-chain signals
+    - launch
+    - financing
+    - expansion
+    - capacity
+    - shipment
+    - production
+    - supply contract
+    - datacenter
+    - outage
+    - recall
+    - macro
+    - inflation
+    - interest rate
+    - tariff
+    - ai chip
+    - gpu
+    - npu
+    - foundry
+    - packaging
+    - substrate
+    - server
+    - liquid cooling
+    - optical module
+    - hbm
+    - cpo
+    - quantum computing
+    - robot
+    - automation
+    - roadmap
+    - design win
+    - 量产
+    - 扩产
+    - 发货
+    - 交付
+    - 事故
+    - 宕机
+    - 召回
+    - 宏观
+    - 通胀
+    - 利率
+    - 关税
+    - 数据中心
+    - 服务器
+    - 液冷
+    - 光模块
+    - HBM
+    - CPO
+    - 量子计算
+    - 机器人
+    - 自动化
+negatives:
+  - rumor
+  - considering
+  - may
+  - plan to
+  - explore
+  - 未证实
+  - 传闻
+  - 或考虑
+weights:
+  tier1: 50
+  tier2: 25
+  negative: -30
+  source_rss_base: 20          # Primary source base score (default)
+  source_secondary_base: 10    # Secondary source base score (can be overridden per source in scorer)
+  watchlist_bonus: 10
+source_blacklist: []
+keyword_blacklist: []

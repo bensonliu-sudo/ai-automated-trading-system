@@ -1,0 +1,11 @@
+httpx[http2]==0.27.*
+feedparser==6.0.*
+PyYAML==6.*
+python-dateutil==2.9.*
+python-telegram-bot==21.*
+aiosqlite==0.19.*
+pandas==2.2.*
+pyarrow==17.*
+ujson==5.*
+tqdm==4.*
+streamlit==1.38.*
